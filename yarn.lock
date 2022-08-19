@@ -47,7 +47,7 @@
     chromatism "^2.6.0"
     lodash "^4.17.21"
 
-"@atlaskit/button@^16.3.0":
+"@atlaskit/button@^16.3.0", "@atlaskit/button@^16.3.5":
   version "16.3.5"
   resolved "https://registry.yarnpkg.com/@atlaskit/button/-/button-16.3.5.tgz#252a1fe9defceb65d716e0cae2878eb126dd7da7"
   integrity sha512-tBzOYHogQeZETcD6tV9SH0PVHH05sCsMqtnWMlXq6UQHx5qe8phcYcuzkDvTaE8x7Cq9YiURA22YQpyKQHlsRw==

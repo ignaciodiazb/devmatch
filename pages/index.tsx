@@ -1,3 +1,4 @@
+import Button from '@atlaskit/button';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
@@ -12,6 +13,15 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
+      <div className="w-full flex flex-col justify-center items-center h-96 text-slate-800">
+        <h1 className="text-5xl font-medium">Lorem Ipsum</h1>
+        <h2 className="text-3xl pt-1">
+          Neque porro quisquam est qui dolorem ipsum quia dolor sit amet
+        </h2>
+        <div className="pt-5">
+          <Button appearance="primary">Get started</Button>
+        </div>
+      </div>
     </div>
   );
 };
