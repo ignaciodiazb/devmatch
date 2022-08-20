@@ -1,6 +1,7 @@
 import Button from '@atlaskit/button';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import styles from '../styles/Home.module.css';
 
@@ -15,13 +16,82 @@ const Home: NextPage = () => {
       <Navbar />
       <div className="w-full flex flex-col justify-center items-center h-96 text-slate-800">
         <h1 className="text-5xl font-medium">Lorem Ipsum</h1>
-        <h2 className="text-3xl pt-1">
+        <h2 className="text-3xl pt-1 text-center">
           Neque porro quisquam est qui dolorem ipsum quia dolor sit amet
         </h2>
-        <div className="pt-5">
-          <Button appearance="primary">Get started</Button>
+        <div className="md:w-1/6 pt-5">
+          <Button appearance="primary" shouldFitContainer>
+            Get started
+          </Button>
         </div>
       </div>
+      <main className={'p-8 bg-slate-200'}>
+        <h2 className={'text-3xl text-center text-slate-800 mb-4'}>
+          How it works
+        </h2>
+        <div className={'grid md:grid-cols-3 gap-10'}>
+          <div className={'rounded-lg shadow-lg bg-white'}>
+            <div>
+              <Image
+                alt={''}
+                className={'rounded-t-lg'}
+                src={'/placeholder-image.png'}
+                height={300}
+                width={400}
+              />
+            </div>
+            <div className={'py-4 px-2'}>
+              <h3 className={'text-xl font-medium'}>Heading 1</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                ac aliquam nisl, ut ultrices est. Aliquam ut risus libero.
+                Integer tempor enim et libero imperdiet, tempor consectetur
+                purus euismod.
+              </p>
+            </div>
+          </div>
+          <div className={'rounded-lg shadow-lg bg-white'}>
+            <div>
+              <Image
+                alt={''}
+                className={'rounded-t-lg'}
+                src={'/placeholder-image.png'}
+                height={300}
+                width={400}
+              />
+            </div>
+            <div className={'py-4 px-2'}>
+              <h3 className={'text-xl font-medium'}>Heading 2</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                ac aliquam nisl, ut ultrices est. Aliquam ut risus libero.
+                Integer tempor enim et libero imperdiet, tempor consectetur
+                purus euismod.
+              </p>
+            </div>
+          </div>
+          <div className={'rounded-lg shadow-lg bg-white'}>
+            <div>
+              <Image
+                alt={''}
+                className={'rounded-t-lg'}
+                src={'/placeholder-image.png'}
+                height={300}
+                width={400}
+              />
+            </div>
+            <div className={'py-4 px-2'}>
+              <h3 className={'text-xl font-medium'}>Heading 3</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                ac aliquam nisl, ut ultrices est. Aliquam ut risus libero.
+                Integer tempor enim et libero imperdiet, tempor consectetur
+                purus euismod.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   );
 };
