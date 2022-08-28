@@ -12,6 +12,7 @@
     "@atlaskit/atlassian-navigation": "^2.2.6",
     "@atlaskit/button": "^16.3.5",
     "next": "12.2.5",
+    "next-auth": "^4.10.3",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },

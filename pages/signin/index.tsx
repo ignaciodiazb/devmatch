@@ -1,8 +1,9 @@
 import Button from '@atlaskit/button';
-import Link from 'next/link';
+import { GetServerSideProps } from 'next';
 import type { NextPage } from 'next';
+import { getSession, signIn } from 'next-auth/react';
 
-const SignIn: NextPage = () => {
+const SignIn: NextPage = (props) => {
   return (
     <div className={'h-screen flex flex-col justify-center items-center'}>
       <div className={'h-screen flex flex-col justify-center items-center'}>
@@ -12,7 +13,9 @@ const SignIn: NextPage = () => {
           </h1>
         </div>
         <div className={'flex flex-col'}>
-          <Button appearance={'primary'}>Sign in with Google</Button>
+          <Button appearance={'primary'} onClick={() => signIn()}>
+            Sign in with Google
+          </Button>
         </div>
       </div>
     </div>
@@ -20,3 +23,24 @@ const SignIn: NextPage = () => {
 };
 
 export default SignIn;
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const session = await getSession(context);
+
+  if (session) {
+    return {
+      props: {
+        isLoggedIn: true,
+      },
+      redirect: {
+        destination: '/',
+      },
+    };
+  }
+
+  return {
+    props: {
+      isLoggedIn: false,
+    },
+  };
+};
