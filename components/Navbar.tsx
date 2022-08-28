@@ -1,7 +1,6 @@
 import CreateButton from './CreateButton';
 import CustomHome from './CustomHome';
 import CustomRouterLink from './CustomRouterLink';
-import SignInButton from './SignInButton';
 import {
   AtlassianNavigation,
   PrimaryButton,
@@ -36,7 +35,6 @@ const Navbar = () => (
     ]}
     renderCreate={CreateButton}
     renderProductHome={CustomHome}
-    renderSignIn={SignInButton}
   />
 );
 
